@@ -18,4 +18,24 @@ $(document).ready(function() {
 
     event.preventDefault();
   });
+
+  $("#formTwo").submit(function(event) {
+    var personname = $("input#name").val();
+
+    $(".name").text(personname);
+
+    $("#letter").show();
+
+    event.preventDefault();
+  });
+
+  $("#formThree").submit(function(event) {
+    var capitals = $("input#whatwillbeshouted").val();
+    var CAPITALSSHOUTED = capitals.toUpperCase();
+    $(".whatwillbeshouted").text(CAPITALSSHOUTED);
+
+    $("#shoutedcontent").show();
+
+    event.preventDefault();
+  });
 });
